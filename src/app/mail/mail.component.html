@@ -1,0 +1,16 @@
+<section>
+  <table>
+    <tr>
+      <th>Email</th>
+      <th>Importance</th>
+      <th>Subject</th>
+      <th>Content</th>
+    </tr>
+    <tr *ngFor="let person of people">
+      <td>{{person.email | lowercase}}</td>
+      <td> <span *ngIf='person.important'>High</span><span *ngIf='!person.important'>Low</span></td>
+      <td>{{person.subject}}</td>
+      <td>{{person.content}}</td>
+    </tr>
+  </table>
+</section>
